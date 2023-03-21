@@ -1,0 +1,156 @@
+/* BELOW 1200px */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* BELOW 1000px */
+@media (max-width: 63em) {
+  html {
+    font-size: 48%;
+  }
+
+  .navigation {
+    height: 7vh;
+  }
+
+  .section {
+    padding: 15rem 4rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+
+  .services__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+
+  .contact__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+
+  .heading-primary {
+    font-size: 1.6rem;
+    word-spacing: 5px;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+/* BELOW 800px */
+@media (max-width: 51em) {
+  .navigation {
+    padding: 0 3rem;
+  }
+
+  .navigation__links {
+    gap: 3rem;
+  }
+
+  .card {
+    padding: 4rem 2rem;
+  }
+}
+
+/* BELOW 500px */
+@media (max-width: 32em) {
+  html {
+    font-size: 45%;
+  }
+
+  .navigation__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8rem;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    /* HIDE THE NAVIGATION */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+
+  .navigation__btn {
+    display: block;
+    z-index: 10000;
+  }
+
+  .navigation__btn-icon {
+    font-size: 3.5rem;
+    color: #444;
+  }
+
+  .navigation__btn-icon.fa-xmark {
+    display: none;
+  }
+
+  .navigation-open .fa-bars.navigation__btn-icon {
+    display: none;
+  }
+  .navigation-open .fa-xmark.navigation__btn-icon {
+    display: block;
+  }
+
+  .navigation-open .navigation__links {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .navigation__link {
+    font-size: 3rem;
+  }
+}
+
+/* BELOW 400px */
+@media (max-width: 30em) {
+  html {
+    font-size: 40%;
+  }
+
+  .navigation {
+    height: 6vh;
+  }
+
+  .home {
+    height: 50vh;
+  }
+
+  .navigation__logo {
+    font-size: 1.6rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+
+  .services__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+
+  .contact__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+}

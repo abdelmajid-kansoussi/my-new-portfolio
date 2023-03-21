@@ -1,314 +1,161 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  /* 1 rem = 1em = 10 px */
-  font-size: 62.5%;
-}
-
-body {
-  font-family: Roboto, sans-serif;
-}
-
-.section-hidden {
-  opacity: 0;
-  transform: translateY(8rem);
-}
-
-.section {
-  transition: all 1s linear;
-}
-
 /* NAVIGATION */
-.nav {
+.navigation {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: 6rem;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  background-color: white;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding: 0 10rem;
 }
 
-.nav-logo {
+.navigation__btn {
+  border: none;
+  background: none;
+  display: none;
+}
+
+
+.navigation__logo {
   font-size: 2rem;
-  color: #1864ab;
   font-weight: 900;
   word-spacing: 5px;
   letter-spacing: 1px;
+  color: #37b24d;
 }
 
-.nav-links {
+.navigation__links {
   display: flex;
   align-items: center;
   list-style: none;
   gap: 8rem;
+  background-color: white;
+  transition: all 0.5s ease-in;
 }
 
-.nav-links div {
+
+.navigation__link {
   cursor: pointer;
   text-decoration: none;
-  color: black;
   font-size: 1.8rem;
+  color: #333;
 }
 
 /* HOME SECTION */
-.section-home {
-  padding: 15rem;
+.home {
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #a5d8ff;
+  background: linear-gradient(to right, #d3f9d8, #69db7c);
 }
 
-.home-info {
+.home__info {
   flex: 50%;
+}
+
+.home__icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 4rem;
 }
 
-.home-info h1 {
-  color: black;
-  font-size: 2.2rem;
-  word-spacing: 5px;
-  text-align: center;
-}
-
-.home-icons {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;
-}
-
-.home-icons i {
+.home__icon {
   font-size: 3rem;
-  color: black;
+  color: #444;
 }
 
-.home-image {
+.home__image {
   flex: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.home-image img {
+.home__image img {
   width: 40%;
   border-radius: 50%;
-  border: 3px solid #1864ab;
   background-color: white;
 }
 
 /* SERVICES SECTION */
-.section-services {
-  padding: 10rem;
-}
-
-.section-services h2 {
-  font-size: 4rem;
+.card__icon {
+  width: 100%;
   text-align: center;
-  color: #1864ab;
-  margin-bottom: 7rem;
-}
-
-.services-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10rem;
-}
-
-.service-card {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 60rem;
-  height: 35rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 4rem 2rem;
-  transition: all 0.3s linear;
-  border-radius: 5px;
-}
-
-.service-card:hover {
-  scale: 1.1;
-}
-
-.service-card i {
   font-size: 5rem;
   margin-bottom: 1rem;
-  color: black;
 }
 
-.service-card h3 {
+.card__description {
+  display: block;
   text-align: center;
-  margin-bottom: 4rem;
-  font-size: 2rem;
-  color: #333;
-}
-
-.service-card p {
-  text-align: center;
-  font-size: 1.8rem;
   line-height: 3rem;
-  color: #555;
+  font-size: 1.5rem;
 }
 
 /* SECTION PROJECTS# */
-.section-projects {
-  padding: 10rem;
-  background-color: #a5d8ff;
+.projects {
+  background-color: #d3f9d8;
 }
 
-.section-projects h2 {
-  font-size: 4rem;
-  text-align: center;
-  color: black;
-  margin-bottom: 7rem;
+.card__image {
+  width: 100%;
+  height: 30rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
 }
 
-.slider {
+.card__image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* SECTION ABOUT */
+.about__container {
+  padding: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5rem;
-}
-
-.slider-left-btn,
-.slider-right-btn {
-  font-size: 3rem;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-}
-
-.slides {
-  height: 60rem;
-  position: relative;
-  flex-grow: 1;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-  background-color: white;
-  transition: all 0.8s linear;
-}
-
-.slide-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 50%;
-}
-
-.slide-image img {
-  width: 80%;
-}
-
-.slide-description {
-  flex: 50%;
-  padding: 3.5rem;
-}
-
-.slide-description h3 {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 5rem;
-  text-decoration: underline;
-}
-
-.slide-description p {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 5rem;
-  line-height: 3rem;
-}
-
-.slide-btn {
-  display: block;
-  padding: 1.6rem 3.2rem;
-  margin: auto;
-  width: 20rem;
-  background: none;
-  border: 1px solid black;
-  border-radius: 5px;
-  transition: all linear 0.3s;
-  cursor: pointer;
-}
-
-.slide button:hover {
-  scale: 1.1;
-  background-color: #ffe066;
-}
-
-/* SECTION CONTACT */
-.section-contact {
-  background-color: white;
-  padding: 10rem;
-}
-
-.section-contact h2 {
-  font-size: 4rem;
-  text-align: center;
-  color: #1864ab;
-  margin-bottom: 7rem;
-}
-
-.contact-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10rem;
-}
-
-.contact-card {
-  padding: 5rem 10rem;
-  width: 40rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.about__image {
+  width: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  transition: all linear 0.5s;
 }
 
-.contact-card-icon {
-  font-size: 7rem;
-  margin-bottom: 2rem;
+.about__image img {
+  width: 80%;
+  border: 3px solid #37b24d;
+  border-radius: 50%;
 }
 
-.contact-card h3 {
-  font-size: 2rem;
-  margin-bottom: 4rem;
+.about__decription {
+  width: 80%;
+  font-size: 1.7rem;
+  line-height: 4rem;
 }
 
-.contact-card p,
-.contact-card a {
-  font-size: 2rem;
-}
-
-.contact-card:hover {
-  scale: 1.1;
+.about {
+  background-color: #d3f9d8;
 }
 
 /* SECTION FOOTER */
-.section-footer {
-  background-color: #a5d8ff;
+.footer {
   padding: 10rem;
 }
 
-.footer-icons {
+.footer__icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -316,14 +163,14 @@ body {
   margin-bottom: 6rem;
 }
 
-.footer-icons i {
-  font-size: 3rem;
-  color: black;
+.footer__icon {
+  font-size: 2rem;
   cursor: pointer;
+  color: #333;
 }
 
-.footer-copyright {
-  color: black;
+.footer__copyright {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  word-spacing: 5px;
 }

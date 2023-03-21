@@ -11,193 +11,233 @@
       rel="stylesheet"
     />
     <link href="styles.css" rel="stylesheet" />
+    <link href="general.css" rel="stylesheet" />
+    <link href="queries.css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
     <header>
       <!-- NAVIGATION -->
-      <nav class="nav">
-        <h1 class="nav-logo">ABDEL MAJID</h1>
-        <ul class="nav-links">
-          <div href="#home">Home</div>
-          <div href="#services">Services</div>
-          <div href="#projects">Projects</div>
-          <div href="#about">About</div>
-          <div href="#contact">Contact</div>
+      <nav class="navigation">
+        <h1 class="navigation__logo">ABDEL MAJID</h1>
+        <ul class="navigation__links">
+          <a href="#home" class="navigation__link">Home</a>
+          <a href="#services" class="navigation__link">Services</a>
+          <a href="#projects" class="navigation__link">Projects</a>
+          <a href="#contact" class="navigation__link">Contact</a>
+          <a href="#about" class="navigation__link">About</a>
         </ul>
+        <button class="navigation__btn">
+          <i class="fa-solid fa-bars navigation__btn-icon"></i>
+          <i class="fa-solid fa-xmark navigation__btn-icon"></i>
+        </button>
       </nav>
     </header>
 
     <!-- HOME SECTION -->
-    <section class="section section-home">
-      <div class="home-info">
-        <h1>Hi, I' am Abdel Majid, and I' am a software engineer</h1>
-        <div class="home-icons">
+    <section class="section home" id="home">
+      <div class="home__info">
+        <h2 class="heading-primary">
+          Hi, I' am Abdel Majid, and I' am a Web developer
+        </h2>
+        <div class="home__icons">
           <!-- FACEBOOK -->
           <a href="https://www.facebook.com/abdelmajid.kansoussi.54"
-            ><i class="fa-brands fa-facebook"></i
+            ><i class="fa-brands fa-facebook home__icon"></i
           ></a>
           <!-- LINKED IN -->
           <a
             href="https://www.linkedin.com/in/abdel-majid-kansoussi-110878257/recent-activity/"
           >
-            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-linkedin home__icon"></i>
           </a>
           <!-- YOUTUBE -->
           <a href="https://www.youtube.com/channel/UCE5c0vhUW9W3LKYZvEHaQEA">
-            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-youtube home__icon"></i>
           </a>
           <!-- GITHUB -->
           <a href="https://github.com/abdelmajid-kansoussi">
-            <i class="fa-brands fa-github"> </i>
+            <i class="fa-brands fa-github home__icon"> </i>
           </a>
         </div>
       </div>
-      <div class="home-image">
-        <img src="images/profile-image.png" />
+      <div class="home__image">
+        <img src="images/profile-image.png" alt="profile image" />
       </div>
     </section>
 
     <!-- SERVICES SECTION -->
-    <section class="section section-services" id="services">
-      <h2 class="section-title">Services</h2>
-      <div class="services-container">
-        <div class="service-card">
-          <i class="fa-solid fa-code"></i>
-          <h3>Web development</h3>
-          <p>Creation of web application, websites and games</p>
+    <section class="section services" id="services">
+      <h2 class="heading-secondary">Services</h2>
+      <div class="three-cols-grid services__container">
+        <div class="card">
+          <i class="fa-solid fa-code card__icon"></i>
+          <h3 class="heading-tertiary">Web development</h3>
+          <p class="card__description">
+            Creation of web application, websites and games
+          </p>
         </div>
-        <div class="service-card">
-          <i class="fa-solid fa-gamepad"></i>
-          <h3>Game development</h3>
-          <p>Creation of games with python and Javascript</p>
+        <div class="card">
+          <i class="fa-solid fa-gamepad card__icon"></i>
+          <h3 class="heading-tertiary">Game development</h3>
+          <p class="card__description">
+            Creation of games with python and Javascript
+          </p>
         </div>
-        <div class="service-card">
-          <i class="fa-solid fa-brain"></i>
-          <h3>Artificial intelligence</h3>
-          <p>Creation of machine learning and deep learning models</p>
+        <div class="card">
+          <i class="fa-solid fa-brain card__icon"></i>
+          <h3 class="heading-tertiary">Artificial intelligence</h3>
+          <p class="card__description">
+            Creation of machine learning and deep learning models
+          </p>
         </div>
       </div>
     </section>
 
     <!-- SECTION PROJECTS -->
-    <section class="section section-projects">
-      <h2>Projects</h2>
-      <div class="slider">
-        <button class="slider-left-btn">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <div class="slides">
-          <!-- SLIDE 1 -->
-          <div class="slide">
-            <div class="slide-image">
-              <img src="images/connect-four.png" />
-            </div>
-            <div class="slide-description">
-              <h3>Connect Four</h3>
-              <p>
-                A simulation of connect four game, in which the players choose a
-                color and then take turns dropping colored tokens into a
-                seven-column, six-row vertically suspended grid. The pieces fall
-                straight down, occupying the lowest available space within the
-                column. The objective of the game is to be the first to form a
-                horizontal, vertical, or diagonal line of four of one's own
-                tokens. You can play with your friend or the computer.
-              </p>
-              <button class="slide-btn">View Project</button>
-            </div>
+    <section class="section projects" id="projects">
+      <h2 class="heading-secondary">Projects</h2>
+      <div class="gallery three-cols-grid">
+        <div class="card">
+          <div class="card__image">
+            <img
+              data-src="images/tetris.png"
+              alt="tetris"
+              src="images/lazy-tetris.png"
+              class="lazy-img"
+            />
           </div>
-          <!-- SLIDE 2 -->
-          <div class="slide">
-            <div class="slide-image">
-              <img src="images/tetris.png" />
-            </div>
-            <div class="slide-description">
-              <h3>Tetris</h3>
-              <p>
-                A simulation of connect four game, in which the players choose a
-                color and then take turns dropping colored tokens into a
-                seven-column, six-row vertically suspended grid. The pieces fall
-                straight down, occupying the lowest available space within the
-                column. The objective of the game is to be the first to form a
-                horizontal, vertical, or diagonal line of four of one's own
-                tokens. You can play with your friend or the computer.
-              </p>
-              <button class="slide-btn">View Project</button>
-            </div>
-          </div>
-          <!-- SLIDE 3 -->
-          <div class="slide">
-            <div class="slide-image">
-              <img src="images/simon-clone.png" />
-            </div>
-            <div class="slide-description">
-              <h3>Simon</h3>
-              <p>
-                A simulation of connect four game, in which the players choose a
-                color and then take turns dropping colored tokens into a
-                seven-column, six-row vertically suspended grid. The pieces fall
-                straight down, occupying the lowest available space within the
-                column. The objective of the game is to be the first to form a
-                horizontal, vertical, or diagonal line of four of one's own
-                tokens. You can play with your friend or the computer.
-              </p>
-              <button class="slide-btn">View Project</button>
-            </div>
-          </div>
+          <h3 class="heading-tertiary">Tetris</h3>
+          <button class="btn btn--green">View project</button>
         </div>
-        <button class="slider-right-btn">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
+        <div class="card">
+          <div class="card__image">
+            <img
+              data-src="images/wordle.png"
+              alt="wordle"
+              src="images/lazy-wordle.png"
+              class="lazy-img"
+            />
+          </div>
+          <h3 class="heading-tertiary">Wordle</h3>
+          <button class="btn btn--green">View project</button>
+        </div>
+        <div class="card">
+          <div class="card__image">
+            <img
+              data-src="images/flappy-bird.png"
+              alt="flappy bird"
+              src="images/lazy-flappy-bird.png"
+              class="lazy-img"
+            />
+          </div>
+          <h3 class="heading-tertiary">Flappy bird</h3>
+          <button class="btn btn--green">View project</button>
+        </div>
+        <div class="card">
+          <div class="card__image">
+            <img
+              data-src="images/connect-four.png"
+              alt="connect four"
+              src="images/lazy-connect-four.png"
+              class="lazy-img"
+            />
+          </div>
+          <h3 class="heading-tertiary">Connect four</h3>
+          <button class="btn btn--green">View project</button>
+        </div>
+        <div class="card">
+          <div class="card__image">
+            <img
+              data-src="images/minesweeper.png"
+              alt="minesweeper"
+              src="images/lazy-minesweeper.png"
+              class="lazy-img"
+            />
+          </div>
+          <h3 class="heading-tertiary">Mineswepper</h3>
+          <button class="btn btn--green">View project</button>
+        </div>
+        <div class="card">
+          <div class="card__image">
+            <img
+              src="images/memory-game.png"
+              alt="memory game"
+              data-src="images/memory-game.png"
+              class="lazy-img"
+            />
+          </div>
+          <h3 class="heading-tertiary">Memory game</h3>
+          <button class="btn btn--green">View project</button>
+        </div>
       </div>
     </section>
 
     <!-- SECTION CONTACT -->
-    <section class="section section-contact">
-      <h2>Contact</h2>
-      <div class="contact-container">
-        <div class="contact-card">
-          <i class="fa-solid fa-phone contact-card-icon"></i>
-          <h3>phone</h3>
-          <p>06 25 01 95 83</p>
+    <section class="section contact" id="contact">
+      <h2 class="heading-secondary">Contact</h2>
+      <div class="three-cols-grid contact__container">
+        <div class="card">
+          <i class="fa-solid fa-phone card__icon"></i>
+          <h3 class="heading-tertiary">phone</h3>
+          <p class="card__description">06 25 01 95 83</p>
         </div>
-        <div class="contact-card">
-          <i class="fa-brands fa-linkedin contact-card-icon"></i>
-          <h3>Linked In</h3>
-          <a href="https://www.linkedin.com/in/abdel-majid-kansoussi-110878257/"
+        <div class="card">
+          <i class="fa-brands fa-linkedin card__icon"></i>
+          <h3 class="heading-tertiary">Linked In</h3>
+          <a
+            href="https://www.linkedin.com/in/abdel-majid-kansoussi-110878257/"
+            class="card__description"
             >My account</a
           >
         </div>
-        <div class="contact-card">
-          <i class="fa-solid fa-envelope contact-card-icon"></i>
-          <h3>email</h3>
-          <p>kansoussi9763@gmail.com</p>
+        <div class="card">
+          <i class="fa-solid fa-envelope card__icon"></i>
+          <h3 class="heading-tertiary">email</h3>
+          <p class="card__description">kansoussi9763@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+    <!--SECTION ABOUT-->
+    <section class="section about" id="about">
+      <h2 class="heading-secondary">About</h2>
+      <div class="about__container">
+        <div class="about__image"><img src="images/profile-image.png" /></div>
+        <div class="about__decription">
+          <p>
+            Hi, I am abdel majid kansoussi. I am 22 yeard old. I am a master
+            student of fundamental mathematics and application in Ain chock
+            University at Casablanca Morocco. I love Mathematics and computer
+            science and games. I like developing web applications, games and AI,
+            and now i am looking for a job
+          </p>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="section section-footer">
-      <div class="footer-icons">
+    <footer class="footer">
+      <div class="footer__icons">
         <a
           href="https://www.linkedin.com/in/abdel-majid-kansoussi-110878257/recent-activity/"
         >
-          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-linkedin footer__icon"></i>
         </a>
         <a href="https://www.youtube.com/channel/UCE5c0vhUW9W3LKYZvEHaQEA">
-          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-youtube footer__icon"></i>
         </a>
         <a href="https://github.com/abdelmajid-kansoussi">
-          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-github footer__icon"></i>
         </a>
         <a>
-          <i class="fa-solid fa-envelope"></i>
+          <i class="fa-solid fa-envelope footer__icon"></i>
         </a>
         <a href="https://www.facebook.com/abdelmajid.kansoussi.54/">
-          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-facebook footer__icon"></i>
         </a>
       </div>
-      <p class="footer-copyright">
+      <p class="footer__copyright">
         Copyright 2023 Abdel majid Kansoussi. All rights reserved
       </p>
     </footer>
